@@ -1,0 +1,110 @@
+/* ARDHANARI: original burgundy / antique-gold identity.
+   Dark brand framing; ivory shopping surfaces; burgundy actions; gold detail. */
+:root {
+  --burgundy: #340509;
+  --burgundy-deep: #260306;
+  --burgundy-hover: #51101a;
+  --antique-gold: #b99a63;
+  --gold-light: #dfc99f;
+  --gold-line: #b99a634d;
+  --gold: var(--antique-gold);
+  --oxblood: var(--burgundy);
+  --brand-accent-text: #80633d;
+  --brand-focus: #9b7844;
+}
+.announcement {
+  background: var(--burgundy-deep);
+  color: var(--gold-light);
+  border-bottom: 1px solid var(--gold-line);
+}
+.announcement span:last-child { color: var(--gold-light); }
+.header.heritage-header {
+  background: var(--burgundy);
+  color: var(--gold-light);
+  border-bottom: 1px solid var(--antique-gold);
+}
+.masthead {
+  display: grid;
+  position: relative;
+  grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+  min-height: 142px;
+}
+.masthead .brand { grid-column: 2; justify-self: center; margin: 13px 0; }
+.brand .brand-original-logo { width: 180px; height: auto; }
+.masthead-note { grid-column: 1; grid-row: 1; color: var(--gold-light); }
+.masthead-note a { color: #eee0c8; }
+.masthead .header-actions { grid-column: 3; grid-row: 1; justify-self: end; }
+.masthead .mobile-menu { grid-column: 1; grid-row: 1; justify-self: start; }
+.header .icon-button { color: var(--gold-light); }
+.header .icon-button:hover { color: #fff3db; background: #ffffff0a; }
+.desktop-nav { border-top: 1px solid var(--gold-line); min-height: 49px; gap: clamp(20px,3.8vw,58px); }
+.desktop-nav a { position: relative; color: #eee0c8; letter-spacing: 1.6px; }
+.desktop-nav a:hover, .desktop-nav a[aria-current="page"] { color: var(--gold-light); }
+.desktop-nav a[aria-current="page"]::after {
+  content: ""; position: absolute; height: 1px; background: var(--antique-gold);
+  bottom: 3px; left: 0; right: 0;
+}
+.header :focus-visible, .footer :focus-visible, .navigation-panel :focus-visible {
+  outline-color: var(--gold-light);
+}
+.button.primary { background: var(--burgundy); border-color: var(--burgundy); color: #f8efdf; }
+.button.primary:hover { background: var(--burgundy-hover); border-color: var(--burgundy-hover); }
+.button.secondary { color: var(--burgundy); border-color: var(--antique-gold); }
+.button.secondary:hover { border-color: var(--burgundy); }
+.button.light { background: #f4ecdc; color: var(--burgundy); border-color: var(--gold-light); }
+.text-link { border-bottom-color: var(--antique-gold); }
+.text-link:hover { color: var(--burgundy); }
+.heritage-hero .text-link:hover, .signature .text-link:hover { color: #fff3db; }
+h1, h2, h3 { text-wrap: balance; }
+.shop-heading h1, .page-heading h1, .policy-section h2, .product-info h1,
+.account-layout h2, .admin-content h2 { color: var(--burgundy); }
+.collection-tabs .active, .detail-tabs button.active { color: var(--burgundy); border-color: var(--burgundy); }
+.quiz-options button.active, .admin-layout > nav button.active {
+  background: var(--burgundy); color: #f8efdf; border-color: var(--burgundy);
+}
+.account-layout nav a.active { color: var(--burgundy); border-color: var(--antique-gold); }
+.variant-options button.selected, .thumbnail-row button.active { border-color: var(--burgundy); }
+.modal-overlay { background: #26030680; }
+.navigation-panel { background: var(--burgundy); color: #f4e7d0; }
+.navigation-panel .brand { justify-content: center; margin: 0 auto 26px; }
+.navigation-panel .eyebrow, .navigation-panel .icon-button { color: var(--gold-light); }
+.navigation-panel nav a { border-color: var(--gold-line); }
+.navigation-panel nav a:hover { color: var(--gold-light); }
+.house-introduction > .original-emblem { border-radius: 50%; width: 88px; height: 88px; }
+.newsletter { background: var(--burgundy); border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line); }
+.newsletter .eyebrow, .newsletter button { color: var(--gold-light); }
+.newsletter form { border-bottom-color: var(--antique-gold); }
+.footer { background: var(--burgundy-deep); color: #eee0c8; }
+.footer .brand { align-self: flex-start; }
+.footer .brand .brand-original-logo { width: 180px; }
+.footer p, .footer .tiny, .footer-bottom { color: #d9c6ac; }
+.footer h3 { color: var(--gold-light); }
+.footer a:hover { color: var(--gold-light); }
+.footer-bottom { border-color: var(--gold-line); }
+@media (max-width: 1100px) {
+  .masthead { min-height: 134px; }
+}
+@media (max-width: 540px) {
+  .masthead { min-height: 106px; gap: 0; }
+  .masthead .brand { margin: 8px 0; }
+  .brand .brand-original-logo { width: 138px; }
+  .masthead .header-actions { gap: 0; }
+  .header-actions .icon-button { min-width: 28px; }
+  .footer .brand .brand-original-logo { width: 168px; }
+}
+
+/* Customer sign-in shares the storefront palette. */
+.customer-signin{color:var(--gold-light);font-size:11px;white-space:nowrap;padding:10px 7px;text-decoration:underline;text-underline-offset:5px}
+.customer-loading{display:block;width:34px;height:34px}
+.auth-section{max-width:1000px;padding:65px 5%;margin:auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:25px;min-height:60vh}
+.auth-section h1{color:var(--burgundy);font-size:clamp(38px,5vw,62px)}
+.auth-section>p{max-width:490px}.auth-section .cl-rootBox{max-width:100%}.auth-section .cl-cardBox{max-width:100%}
+@media(max-width:540px){.customer-signin{font-size:10px;padding:8px 3px}.masthead .header-actions{gap:2px}.masthead .header-actions .icon-button{min-width:25px}.auth-section{padding:40px 4%}}
+
+.phone-auth{width:min(100%,440px);margin:32px auto;padding:32px;background:#fffaf2;border:1px solid #d8c8b4;text-align:left}
+.phone-auth h2{font-size:32px;margin:0 0 12px}.phone-auth p{font-size:14px;line-height:1.7}
+.phone-auth form{display:grid;gap:12px;margin:24px 0}.phone-auth label{font-size:13px;font-weight:600}
+.phone-auth input{width:100%;padding:14px;border:1px solid #b59663;background:#f8f5ef;color:#29221d;font:inherit;border-radius:2px}
+.phone-auth input:focus-visible{outline:2px solid #340509;outline-offset:3px}.phone-auth>.text-link{display:table;margin-top:16px;font-size:13px}
+.phone-auth .phone-error{color:#8b1724;margin:0}.phone-auth button:disabled{opacity:.55;cursor:wait}
+@media(max-width:480px){.phone-auth{padding:24px}}

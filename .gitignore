@@ -1,0 +1,20 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+
+.local/
+.clerk/
+
+# Logs, OS files and unrelated local coursework
+*.log
+logs/
+Thumbs.db
+Desktop.ini
+.vercel/
+.netlify/
+coverage/
+lab_submission/
